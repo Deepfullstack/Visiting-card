@@ -1,0 +1,296 @@
+/* Base styles and variables */
+:root {
+    /* Light theme colors */
+    --primary-color: #4a6fa5;
+    --secondary-color: #6b8cae;
+    --background-color: #f8f9fa;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --text-light: #666666;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --social-icon-color: #555555;
+    --social-icon-hover: var(--primary-color);
+    --transition-speed: 0.3s;
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+    --primary-color: #6b8cae;
+    --secondary-color: #4a6fa5;
+    --background-color: #121212;
+    --card-color: #1e1e1e;
+    --text-color: #f0f0f0;
+    --text-light: #bbbbbb;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --social-icon-color: #aaaaaa;
+    --social-icon-hover: var(--primary-color);
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed) ease;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Card container styles */
+.card-container {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    position: absolute;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.theme-toggle .fa-sun {
+    opacity: 0;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+    opacity: 1;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+    opacity: 0;
+}
+
+/* Visiting card styles */
+.visiting-card {
+    background-color: var(--card-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: all var(--transition-speed) ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.visiting-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow-color);
+}
+
+/* Profile section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: transform var(--transition-speed) ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.job-title {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Contact section */
+.contact-section {
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: rgba(74, 111, 165, 0.1);
+    border-radius: 10px;
+    transition: all var(--transition-speed) ease;
+}
+
+.contact-item:hover {
+    background-color: rgba(74, 111, 165, 0.2);
+    transform: translateX(5px);
+}
+
+.contact-item i {
+    margin-right: 15px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.contact-item span, .contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Social media section */
+.social-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(74, 111, 165, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--social-icon-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* QR code section */
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.qr-code {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.qr-text {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .visiting-card {
+        padding: 20px;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+    }
+    
+    .job-title {
+        font-size: 1rem;
+    }
+    
+    .contact-item {
+        padding: 8px 12px;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 350px) {
+    .visiting-card {
+        padding: 15px;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .name {
+        font-size: 1.3rem;
+    }
+}

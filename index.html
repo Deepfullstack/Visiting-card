@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Visiting Card</title>
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Our custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the visiting card -->
+    <div class="card-container">
+        <!-- Theme toggle button -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+
+        <!-- Card content -->
+        <div class="visiting-card">
+            <!-- Profile section with image and basic info -->
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="/logo.png.png" alt="Profile Picture" class="profile-pic">
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">Rishabh Sikarwar</h1>
+                    <p class="job-title">Director</p>
+                    <p class="company"> <b>J.M.K. Group of College</b>
+
+                        📚 Affiliated to Mahatma Gandhi Chitrakoot Gramodaya Vishwavidyalaya (MGCGV), Satna , jiwaji university gwalior 
+                        🎓 <b>UG, PG, Diploma & ITI Courses | Regular, Private & Distance Education</bb></p>
+                </div>
+            </div>
+
+            <!-- Contact information -->
+            <div class="contact-section">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="https://qrs.ly/zxgnkpz" target="_blank">+91 8982548856</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>jmkgroupcollage@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="http://www.jmkgroupcollage.com" target="_blank">jmk group of collage</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Sabalgarh | Shivpuri | Gwalior |Bhind</span>
+                </div>
+            </div>
+
+            <!-- Social media links -->
+            <div class="social-section">
+                <a href="https://www.facebook.com/share/1AZh51LNvm/" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/jmkskills?igsh=a3V4YzM4OW9oczA3" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+            <!-- QR code section -->
+            <div class="qr-section">
+                <img src="/qr.png" 
+                     alt="QR Code" class="qr-code">
+                <p class="qr-text">Scan to Download Course Brochure</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
